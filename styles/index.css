@@ -2,9 +2,11 @@
     padding: 0;
     margin: 0;
     /* overflow: hidden; */
-    cursor: default;
+    /* cursor: default; */
     scroll-behavior: smooth;
+    cursor: url('../assets/cursor.png'),auto;
 }
+/* * {border:1px solid red} */
 #root {
     display: flex;
     flex-direction: column;
@@ -35,6 +37,7 @@
     background-color: #504E4E;
 }
 #section-1 {
+    cursor: url('../assets/cursor-light.png'),auto;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -51,6 +54,7 @@ nav {
     justify-content: flex-end;
     padding-right: 12%;
     padding-top: 3%;
+    cursor: url('../assets/cursor-light.png'),auto;
 
 }
 ul {
@@ -58,6 +62,7 @@ ul {
     flex-direction: row;
     justify-content: space-around;
     width: 50%;
+    cursor: url('../assets/cursor-light.png'),auto;
   
 }
 li {
@@ -91,6 +96,7 @@ li a {
     width: 100%;
 }
 .header {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,22 +113,24 @@ li a {
     color: white;
     letter-spacing: 4.6px;
     text-align: center;
+    cursor: url('../assets/cursor-light.png'),auto;
 }
 .header p {
     font-family: OpenSans;
     font-size: 20px;
     font-weight: 300;
     margin: 0;
-    cursor: default;
     letter-spacing: 3.28px;
     color: white;
     text-align: center;
+    cursor: url('../assets/cursor-light.png'),auto;
 }
 .pagination {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 7px;
+    cursor: url('../assets/cursor-light.png'),auto;
 }
 .pagination-item p {
     font-family: Oswald;
@@ -332,6 +340,12 @@ li a {
     left: 1%;
     width: 46%;
     height: 1px;
+    transition: all 0.5s;
+}
+.active-underline-service-card-header {
+    background-color: #4CAF50;
+    width: 100%;
+
 }
 .development-icon {
     background-image: url(../assets/coding.png);
@@ -357,6 +371,11 @@ li a {
     line-height: 14px;
     letter-spacing: 0.64px;
     text-align: left;
+    cursor: pointer;
+}
+.services-card > p:last-of-type:hover {
+    font-size: 12px;
+    font-weight: 500;
 }
 #section-4 {
     display: flex;
@@ -398,7 +417,11 @@ li a {
     text-align: left;
     color: rgba(37, 37, 37, 1);
     opacity: 30%;
+    cursor: pointer;
 
+}
+.works-menu > p:hover {
+    opacity: 1;
 }
 .works-4-header {
     position: relative
@@ -454,6 +477,7 @@ li a {
     letter-spacing: 0.8px;
     text-align: left;
     color: rgba(37, 37, 37, 1);
+    cursor: pointer;
     
     
 
@@ -469,6 +493,7 @@ li a {
     letter-spacing: 3px;
     text-align: left;
     color: rgba(37, 37, 37, 1);
+    /* cursor: pointer; */
     
 }
 .active-works {
@@ -538,6 +563,7 @@ li a {
     flex-direction: column;
     justify-content: center;
     align-self: center;
+    transition: all 0.25s;
 }
 .white-box h4,
 .white-box p {
@@ -581,10 +607,9 @@ li a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
+    flex: 1;
     align-items: center;
     justify-content: center;
-    cursor: default;
 }
 .work-together-container {
     background-color: rgba(251, 251, 251, 1);
@@ -641,8 +666,8 @@ footer {
     gap: 23px;
     background-color: rgba(46, 46, 46, 1);
     padding: 5% 0;
-    width: 100vw;
-    
+    /* width: 100vw; */
+    cursor: url('../assets/cursor-light.png'),auto;
 }
 footer p {
     font-family: Oswald;
@@ -660,11 +685,13 @@ footer p {
 .social-icons img {
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 .container {
     margin: 0 auto;
     padding: 0 15px;
     width: 100%;
+    cursor: pointer;
 }
 .message-block {
     background-color: rgb(135, 133, 133);
@@ -702,12 +729,11 @@ form {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: OpenSans;
+    font-family: Oswald;
     opacity: 50%;
     color: #333;
     font-style: normal;
     letter-spacing: 2.3px;
-    padding-left: 5%;
 }
 .message-block-title {
     display: flex;
@@ -815,13 +841,17 @@ input, textarea {
     }
     #section-2 {
         width: 107%;
-        height: 32vh;
+        height: 63vh;
     }
 }
 @media (max-width: 769px) {
-    .services-header h2, .works-4-header h2  {
+    .services-header h2, .works-4-header h2,
+    .team-5-header h2  {
         font-size: 56px;
         font-weight: 500;
+    }
+    .works-4-header-box {
+        margin-bottom: unset;
     }
     .works-menu {
         gap: 7px;
@@ -841,7 +871,7 @@ input, textarea {
         left: 9%
     }
     #section-1 {
-        height: 18vh;
+        height: 58vh;
         
     }
     .header h1 {
@@ -859,17 +889,46 @@ input, textarea {
     #section-4 {
         padding-left: 16%;
     }
+    .team-box {
+        width: 317px;
+        height: 339px;
+    }
+    .message-block-title span {
+        font-size: 43px;
+    }
 }
 @media (max-width: 426px) {
     
     .services-header h2, .works-4-header h2 {
         font-size: 34px;
     }
+    ul {
+        width: 81%;
+    }
+    .works-card {
+        background-position-x: 66%;
+    }
+    .works-card h4 {
+        left: 6%;
+        right: unset
+    }
+    .works-card-description {
+        padding-right: 45%;
+    }
     .underline-header {
         bottom: -10%;
     }
+    .work-together-container h2, .contact-us-container h2  {
+        font-size: 12px;
+    }
+    .work-together-container p, .contact-us-container p  {
+        font-size: 10px;
+    }
     .works-menu p {
         font-size: 6px;
+    }
+    .work-together-container, .contact-us-container {
+        gap: unset
     }
     .works-4-header-box {
         gap: 31px;
@@ -937,7 +996,7 @@ input, textarea {
         padding-left: 5%;
     }
     #section-6 {
-        width: 113%;
+        width: unset;
     }
     .message-block-title span {
         font-size: 29px;
@@ -948,5 +1007,23 @@ input, textarea {
     .message-block-title {
         margin-bottom: 25px;
     }
+    footer p {
+        font-size: 9px;
+    }
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
     
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* ширина всей полосы прокрутки */
+}
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.44);        /* цвет зоны отслеживания */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(112, 189, 89, 1);    /* цвет бегунка */
+    /* border-radius: 20px;       округлось бегунка */
+    /* border: 3px solid rgb(196, 198, 238);  отступ вокруг бегунка */
 }

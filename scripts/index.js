@@ -6,6 +6,9 @@ const messageContainer = document.querySelector('.message-block')
 const messageSentInfo = document.querySelector('.message-sent')
 const contactUsButton = document.querySelector('.contact-btn')
 const menuElements = document.querySelectorAll('.menu-a')
+const paginationItems = document.querySelectorAll('.pagination-item')
+const whiteBoxesTeam = document.querySelectorAll('.white-box')
+const servicesCards = document.querySelectorAll('.services-card')
 const inputElements = [nameInput, phoneInput, messageInput]
 const nameRegex = /^[a-zA-ZА-ЯЁа-яё]+$/;
 const phoneRegex = /(^(?!\+.*\(.*\).*--.*$)(?!\+.*\(.*\).*-$)(([0-9]{0,12})?(\+[0-9]{11})?)$)|(^.*$)/; 
@@ -13,12 +16,35 @@ const phoneRegex = /(^(?!\+.*\(.*\).*--.*$)(?!\+.*\(.*\).*-$)(([0-9]{0,12})?(\+[
 
 for (let i=0; i<menuElements.length; i++) {
     menuElements[i].addEventListener("mouseenter", (e) => {
-        // console.log(e.target.parentNode)
         e.target.children[0].classList.add('active-nav-item')
     menuElements[i].addEventListener('mouseleave', (e) => {
         e.target.children[0].classList.remove('active-nav-item')})
     })
 }
+for (let i=0; i<paginationItems.length; i++) {
+    paginationItems[i].addEventListener("mouseenter", (e) => {
+        e.target.classList.add('active-pagination-item')
+    paginationItems[i].addEventListener('mouseleave', (e) => {
+        e.target.classList.remove('active-pagination-item')})
+    })
+}
+for (let i=0; i<servicesCards.length; i++) {
+    servicesCards[i].addEventListener("mouseenter", (e) => {
+        e.target.children[0].children[1].classList.add('active-icon')
+        e.target.children[0].children[0].children[0].classList.add('active-underline-service-card-header')
+        servicesCards[i].addEventListener('mouseleave', (e) => {
+        e.target.children[0].children[1].classList.remove('active-icon')
+        e.target.children[0].children[0].children[0].classList.remove('active-underline-service-card-header')})
+    })
+}
+for (let i=0; i<whiteBoxesTeam.length; i++) {
+    whiteBoxesTeam[i].addEventListener("mouseenter", (e) => {
+        e.target.classList.add('active-white-box')})
+    whiteBoxesTeam[i].addEventListener('mouseleave', (e) => {
+            e.target.classList.remove('active-white-box')})
+    
+}
+
  
 function openFormContactUs() {
     messageContainer.classList.remove('invalid')
@@ -26,7 +52,7 @@ function openFormContactUs() {
 }
 function openFormProject() {
     messageContainer.classList.remove('invalid')
-    document.querySelector('.message-block-title').children[0].innerHTML = 'Tell us about your project'  
+    document.querySelector('.message-block-title').children[0].innerHTML = 'Tell us about your project!'  
 }
 function validateForm() {
     const name = nameInput.value.trim()

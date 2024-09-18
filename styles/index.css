@@ -1,17 +1,17 @@
 * {
     padding: 0;
     margin: 0;
-    /* overflow: hidden; */
+    overflow-x: hidden;
     /* cursor: default; */
     scroll-behavior: smooth;
     cursor: url('../assets/cursor.png'),auto;
 }
 /* * {border:1px solid red} */
 #root {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* gap: 100px; */
-    padding: 3%;
+    /* padding: 3%; */
 }
 .first-page {
     width: 25px;
@@ -75,7 +75,7 @@ li a {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
-    line-height: 20px;
+    /* line-height: 20px; */
     letter-spacing: 1.9px;
     text-align: left;
     text-decoration: none;
@@ -137,7 +137,7 @@ li a {
     color: rgba(255, 255, 255, 0.44);
     font-size: 18px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 50px;
     cursor: pointer;
 }
 .active-pagination-item > p {
@@ -181,7 +181,7 @@ li a {
     font-size: 53px;
     font-style: normal;
     font-weight: 700;
-    line-height: 60px;
+    /* line-height: 60px; */
     letter-spacing: 2.3px;
 }
 .about-us-we-are h4 {
@@ -202,7 +202,7 @@ li a {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
-    line-height: 25px; 
+    /* line-height: 25px;  */
     letter-spacing: 1.26px;
     margin-bottom: 10%;
 }
@@ -239,7 +239,7 @@ li a {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
-    line-height: 25px; 
+    /* line-height: 25px;  */
     letter-spacing: 1.26px;
     margin-bottom: 10%;
 }
@@ -265,7 +265,7 @@ li a {
     flex-direction: column;
     gap: 10px;
     position: relative;
-    width: max-content;
+    /* width: max-content; */
 }
 .services-header h2,
 .works-4-header h2,
@@ -275,7 +275,7 @@ li a {
     font-size: 74px;
     font-style: normal;
     font-weight: 700;
-    line-height: 60px;
+    /* line-height: 60px; */
     letter-spacing: 2.3px;
     padding-left: 5%;
     text-wrap: nowrap;
@@ -285,7 +285,7 @@ li a {
     position: absolute;
     background-color: rgba(37, 37, 37, 1);
     display: block;
-    bottom: -41%;
+    bottom: 1%;
     left: 6%;
     width: 16%;
     height: 2px;
@@ -329,7 +329,7 @@ li a {
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: 0px 0px 20px #DBDBDB;
+    /* box-shadow: 0px 0px 20px #DBDBDB; */
     filter: opacity(0.5);
 }
 .underline-service-card-header {
@@ -359,7 +359,7 @@ li a {
 .services-card > p:first-of-type {
     font-family: OpenSans;
     font-size: 12px;
-    line-height: 25px;
+    /* line-height: 25px; */
     text-align: left;
     color: rgba(119, 119, 119, 1);
 
@@ -368,13 +368,13 @@ li a {
     font-family: Oswald;
     font-size: 10px;
     font-weight: 300;
-    line-height: 14px;
+    /* line-height: 14px; */
     letter-spacing: 0.64px;
     text-align: left;
     cursor: pointer;
 }
 .services-card > p:last-of-type:hover {
-    font-size: 12px;
+    /* font-size: 12px; */
     font-weight: 500;
 }
 #section-4 {
@@ -453,7 +453,7 @@ li a {
 .works-card h5 {
     font-family: OpenSans;
     font-size: 18px;
-    line-height: 21px;
+    /* line-height: 21px; */
     text-align: left;
     font-weight: 300;
     letter-spacing: 1.15px;
@@ -463,7 +463,7 @@ li a {
 .works-card p:first-of-type {
     font-family: OpenSans;
     font-size: 13px;
-    line-height: 23px;
+    /* line-height: 23px; */
     letter-spacing: 0.8px;
     text-align: left;
     color: rgba(194, 194, 194, 1);
@@ -473,7 +473,7 @@ li a {
 .works-card p:last-of-type {
     font-family: OpenSans;
     font-size: 13px;
-    line-height: 15px;
+    /* line-height: 15px; */
     letter-spacing: 0.8px;
     text-align: left;
     color: rgba(37, 37, 37, 1);
@@ -489,7 +489,7 @@ li a {
     font-family: Oswald;
     font-size: 48px;
     font-weight: 300;
-    line-height: 71px;
+    /* line-height: 71px; */
     letter-spacing: 3px;
     text-align: left;
     color: rgba(37, 37, 37, 1);
@@ -527,7 +527,7 @@ li a {
     /* align-items: center; */
     justify-content: center;
     background-color: rgba(251, 251, 251, 1);
-    padding: 9%;
+    padding: 7%;
 }
 .team-5-header {
     position: relative;
@@ -797,7 +797,7 @@ input, textarea {
 }
 @media (max-width: 1498px) {
     #section-1 {
-        height: 89vh;
+        height: 68vh;
         
     }
     #section-2 {
@@ -805,11 +805,29 @@ input, textarea {
         width: 77%;
     }
     .works-container {
-        margin: 8%;
+        margin: 14% 14% 0 14%;
         width: unset;
     }
     .header h1 {
-        font-size: 59px;
+        font-size: 87px;
+    }
+    .services-header h2, .works-4-header h2, .team-5-header h2  {
+        padding-left: unset;
+    }
+    .underline-header {
+        left: unset;
+    }
+    .works-card h4 {
+        right: 16%;
+    }
+    .works-card h5 {
+        line-height: unset;
+    }
+    .works-card p:last-of-type {
+        line-height: unset;
+    }
+    #section-5 {
+        padding: 6% 12%;
     }
 }
 @media (max-width: 1267px) {
@@ -829,6 +847,9 @@ input, textarea {
     .right-column > h4 {
         left: 9%;
     }
+    .works-card h4 {
+        right: 20%;
+    }
     .works-4-left-box, .works-4-right-box {
         gap: 20px;
         width: 462px;
@@ -843,6 +864,30 @@ input, textarea {
         width: 107%;
         height: 63vh;
     }
+    .works-4-header  {
+        /* padding-left: 23px; */
+    }
+    .works-menu p {
+        font-size: 12px;
+    }
+    .underline-header {
+        left: unset
+    }
+    .services-header h2, .works-4-header h2, .team-5-header h2 {
+        padding-left: unset;
+    }
+    .works-card h5 {
+        line-height: unset;
+    }
+    .works-card p:last-of-type {
+        line-height: unset;
+    }
+    .team-5-header {
+        width: unset;
+    }
+    .works-4-header-box {
+        margin-bottom: 9%;
+    }
 }
 @media (max-width: 769px) {
     .services-header h2, .works-4-header h2,
@@ -850,8 +895,19 @@ input, textarea {
         font-size: 56px;
         font-weight: 500;
     }
+    .works-4-header h2 {
+        width: 242px;
+        letter-spacing: unset;
+    }
     .works-4-header-box {
         margin-bottom: unset;
+    }
+    .works-card h5 {
+        font-size: 16px;
+    }
+
+    .works-card p:last-of-type  {
+        font-size: 11px;
     }
     .works-menu {
         gap: 7px;
@@ -868,7 +924,7 @@ input, textarea {
         font-size: 42px;
     }
     .right-column > h4  {
-        left: 9%
+        left: 4%
     }
     #section-1 {
         height: 58vh;
@@ -916,7 +972,7 @@ input, textarea {
         padding-right: 45%;
     }
     .underline-header {
-        bottom: -10%;
+        bottom: 4px;
     }
     .work-together-container h2, .contact-us-container h2  {
         font-size: 12px;
@@ -925,7 +981,7 @@ input, textarea {
         font-size: 10px;
     }
     .works-menu p {
-        font-size: 6px;
+        font-size: 10px;
     }
     .work-together-container, .contact-us-container {
         gap: unset
@@ -965,12 +1021,31 @@ input, textarea {
         background-image: linear-gradient(91deg, rgba(0, 0, 0, 1) 22%, rgba(241, 235, 235, 0.02) 71%), url(../assets/welcome-image.svg);
     }
     .header h1 {
-        font-size: 48px;
-        text-align: center;
+        font-size: 40px;
+        /* text-align: center; */
+        padding-right: 9%;
+    }
+    .pagination  {
+        margin-right: 5%;
+    }
+    .team-5-header {
+        width: unset;
+    }
+    .team-5-header h2 {
+        font-size: 42px;
     }
     .header p {
-        text-align: center;
-        font-size: 15px;
+        /* text-align: center; */
+        font-size: 8px;
+        padding-right: 14%;
+        text-wrap: wrap;
+    }
+    form {
+        padding-left: 10%;
+
+    }
+    .main-btn  {
+        margin: unset
     }
     .green-box {
         position: absolute;
@@ -978,6 +1053,9 @@ input, textarea {
         left: 17%;
         width: 90%;
         height: 51%;
+    }
+    .works-4-header h2 {
+        width: 200px;
     }
     #section-2 {
         height: 100vh;

@@ -2,20 +2,14 @@
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    /* cursor: default; */
     scroll-behavior: smooth;
     cursor: url('../assets/cursor.png'),auto;
+    transition: all 0.5s
 }
 /* * {border:1px solid red} */
-#root {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 100px; */
-    /* padding: 3%; */
-}
-.first-page {
-    width: 25px;
-    height: 25px;
+.first-page-btn {
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,17 +17,17 @@
     color: black;
     transition: background-color 0.3s ease-in-out;
     position: fixed;
-    bottom: 0%;
-    left: 1%;
+    bottom: 3%;
+    left: 3%;
     border-radius: 50%;
     cursor: pointer;
     z-index: 5;
     border: 1px solid black;
     text-decoration: none;
     font-family: Oswald;
-    font-size: 10px;
+    font-size: 15px;
 }
-.first-page:hover {
+.first-page-btn:hover {
     background-color: #504E4E;
 }
 #section-1 {
@@ -42,12 +36,11 @@
     flex-direction: column;
     width: 100%;
     height: 63vh;
-    background-image: linear-gradient(91deg, rgba(0, 0, 0, 1) 13%, rgba(241, 235, 235, 0.02) 22%), url(../assets/welcome-image.svg);
+    box-shadow:  -18px 5px 98px 32px rgba(0, 0, 0, 0.86) inset;;
+    background-image: /*linear-gradient(91deg, rgba(0, 0, 0, 1) 13%, rgba(241, 235, 235, 0.02) 22%), */url(../assets/welcome-image.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-color: black;
-    
-
 }
 nav {
     display: flex;
@@ -55,7 +48,6 @@ nav {
     padding-right: 12%;
     padding-top: 3%;
     cursor: url('../assets/cursor-light.png'),auto;
-
 }
 ul {
     display: flex;
@@ -63,12 +55,10 @@ ul {
     justify-content: space-around;
     width: 50%;
     cursor: url('../assets/cursor-light.png'),auto;
-  
 }
 li {
     list-style-type: none;   
 }
-
 li a {
     
     font-family: Oswald;
@@ -265,7 +255,7 @@ li a {
     flex-direction: column;
     gap: 10px;
     position: relative;
-    /* width: max-content; */
+    width: max-content;
 }
 .services-header h2,
 .works-4-header h2,
@@ -279,7 +269,6 @@ li a {
     letter-spacing: 2.3px;
     padding-left: 5%;
     text-wrap: nowrap;
-   
 }
 .underline-header {
     position: absolute;
@@ -289,6 +278,10 @@ li a {
     left: 6%;
     width: 16%;
     height: 2px;
+}
+.active-header-underline {
+    background-color: #4CAF50;
+    width: 100%;
 }
 .services-container {
     display: flex;
@@ -362,7 +355,6 @@ li a {
     /* line-height: 25px; */
     text-align: left;
     color: rgba(119, 119, 119, 1);
-
 }
 .services-card > p:last-of-type {
     font-family: Oswald;
@@ -379,8 +371,7 @@ li a {
 }
 #section-4 {
     display: flex;
-    width: 100%;
-   
+    width: 100%;  
 }
 .works-4-left-box,
 .works-4-right-box {
@@ -394,8 +385,7 @@ li a {
     flex-direction: column;
     gap: 60px;
     align-items: flex-start;
-    margin-bottom: 26%;
-    
+    margin-bottom: 26%;   
 }
 .works-container {
     display: flex;
@@ -403,7 +393,6 @@ li a {
     margin: 8% auto;
     flex-wrap: wrap;
 }
-
 .works-menu {
     display: flex;
     gap: 20px;
@@ -418,7 +407,6 @@ li a {
     color: rgba(37, 37, 37, 1);
     opacity: 30%;
     cursor: pointer;
-
 }
 .works-menu > p:hover {
     opacity: 1;
@@ -437,13 +425,14 @@ li a {
     width: 583px;
     justify-content: center;
     align-items: flex-end;
-    
     background-repeat: no-repeat;
     background-size: 75%;
     background-position-x: 1%;
     background-position-y: 1%;
-    margin-bottom: 17%;
-    
+    margin-bottom: 17%;    
+}
+.works-card:hover {
+    background-size: 82%;
 }
 .works-card-description {
     display: flex;
@@ -457,8 +446,7 @@ li a {
     text-align: left;
     font-weight: 300;
     letter-spacing: 1.15px;
-    color: rgba(37, 37, 37, 1);
-    
+    color: rgba(37, 37, 37, 1);   
 }
 .works-card p:first-of-type {
     font-family: OpenSans;
@@ -467,8 +455,6 @@ li a {
     letter-spacing: 0.8px;
     text-align: left;
     color: rgba(194, 194, 194, 1);
-   
-
 }
 .works-card p:last-of-type {
     font-family: OpenSans;
@@ -478,9 +464,11 @@ li a {
     text-align: left;
     color: rgba(37, 37, 37, 1);
     cursor: pointer;
-    
-    
-
+}
+.works-card p:last-of-type:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #4CAF50;
 }
 .works-card h4 {
     position: absolute;
@@ -493,12 +481,11 @@ li a {
     letter-spacing: 3px;
     text-align: left;
     color: rgba(37, 37, 37, 1);
-    /* cursor: pointer; */
-    
+    /* cursor: pointer; */   
 }
 .active-works {
     text-decoration: line-through;
-    text-decoration-line: 2px;
+    text-decoration-thickness: 2px;
     text-decoration-color: #4CAF50;
 }
 .kitten-works {
@@ -533,14 +520,12 @@ li a {
     position: relative;
     width: fit-content;
     margin-bottom: 7%;
-
 }
 .team-container {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
 .team-box {
     display: flex;
@@ -551,8 +536,7 @@ li a {
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 6%;
-    
+    margin-top: 6%;    
 }
 .white-box {
     width: 100%;
@@ -580,7 +564,6 @@ li a {
 .second-team-box {
     background-image: url(../assets/avatar-mich.svg);
 }
-
 .third-team-box {
     background-image: url(../assets/avatar-tim.svg);
 }
@@ -597,10 +580,9 @@ li a {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 21vh;
+    height: 38vh;
     width: 100%;
-    position: relative;
-
+    position: relative;   
 }
 .work-together-container,
 .contact-us-container {
@@ -612,7 +594,7 @@ li a {
     justify-content: center;
 }
 .work-together-container {
-    background-color: rgba(251, 251, 251, 1);
+    background-color: white;
 }
 .contact-us-container {
     background-color: rgba(112, 189, 89, 1);
@@ -641,7 +623,6 @@ li a {
     letter-spacing: 2.6px;
     text-align: center;
     color: rgba(55, 55, 55, 1);
-
 }
 .contact-us-container h2 {
     color: white;
@@ -653,7 +634,6 @@ li a {
     letter-spacing: 1.5px;
     text-align: center;
     color: rgba(55, 55, 55, 1);
-
 }
 .contact-us-container p {
     color: rgba(255, 255, 255, 1);
@@ -676,7 +656,6 @@ footer p {
     letter-spacing: 0.8px;
     color: rgba(255, 255, 255, 1);
     opacity: 50%;
-
 }
 .social-icons {
     display: flex;
@@ -694,7 +673,7 @@ footer p {
     cursor: pointer;
 }
 .message-block {
-    background-color: rgb(135, 133, 133);
+    background-color: #504E4E;
     padding: 40px 0;
     position: relative;
 }
@@ -718,7 +697,6 @@ form {
     font-family: OpenSans;
     font-size: 13px;
     opacity: 0.8;
-    
 }
 .main-btn:hover {
     background: rgba(112, 189, 89, 1);
@@ -731,7 +709,7 @@ form {
     padding: 0;
     font-family: Oswald;
     opacity: 50%;
-    color: #333;
+    color: #fff;
     font-style: normal;
     letter-spacing: 2.3px;
 }
@@ -770,7 +748,6 @@ input, textarea {
     font-weight: 600;
     margin-bottom: 5px;
     /* opacity: 0; */
-
 }
 .message-sent {
     text-align: -webkit-center;
@@ -830,6 +807,15 @@ input, textarea {
         padding: 6% 12%;
     }
 }
+@media (max-width: 1281px) {
+    #section-1 {
+        height: 85vh;
+    }
+    .works-container {
+        margin: 4% 6% 0 14%;
+        width: unset;
+    }
+}
 @media (max-width: 1267px) {
     .works-container {
         margin: unset;
@@ -883,13 +869,16 @@ input, textarea {
         line-height: unset;
     }
     .team-5-header {
-        width: unset;
+        width: 39%;
     }
     .works-4-header-box {
         margin-bottom: 9%;
     }
 }
 @media (max-width: 769px) {
+    ul {
+        width: 70%;
+    }
     .services-header h2, .works-4-header h2,
     .team-5-header h2  {
         font-size: 56px;
@@ -910,7 +899,7 @@ input, textarea {
         font-size: 11px;
     }
     .works-menu {
-        gap: 7px;
+        gap: 26px;
     }
     .works-menu p {
         font-size: 11px;
@@ -953,13 +942,56 @@ input, textarea {
         font-size: 43px;
     }
 }
+@media (max-width: 431px) {
+    ul {
+        width: 93%;
+    }
+    #section-1 {
+        height: 38vh;
+        background-size: cover;
+    }
+    .green-box {
+        top: -1%;
+        left: 21%;
+        width: 37%;
+        height: 65%;
+    }
+    .about-us-background {
+        top: 48%;
+        left: 30%;
+        width: 43%;
+        height: 61%;
+    }
+    .services-card {
+        width: 84%;
+    }
+    .works-menu {
+        gap: 20px;
+        justify-content: unset;
+        /* padding-left: unset; */
+        flex-wrap: wrap;
+    }
+    #section-4 {
+        padding-left: 10%;
+    }
+    #section-6 {
+        height: 30vh;
+    }
+    .message-block-title span {
+        font-size: 27px;
+    }
+    input, textarea {
+        width: 81%;
+    }
+    
+}
 @media (max-width: 426px) {
     
     .services-header h2, .works-4-header h2 {
         font-size: 34px;
     }
     ul {
-        width: 81%;
+        width: 100%;
     }
     .works-card {
         background-position-x: 66%;
@@ -1036,13 +1068,20 @@ input, textarea {
     }
     .header p {
         /* text-align: center; */
-        font-size: 8px;
+        font-size: 16px;
         padding-right: 14%;
         text-wrap: wrap;
     }
+    .works-menu {
+        gap: 14px;
+    }
+    .error-phone, .error-name, .error-message {
+        letter-spacing: unset;
+        margin-bottom: unset;
+        font-size: 12px;
+    }
     form {
         padding-left: 10%;
-
     }
     .main-btn  {
         margin: unset
@@ -1093,6 +1132,55 @@ input, textarea {
         height: 25px;
     }
     
+}
+@media (max-width: 376px) {
+    .header h1 {
+        font-size: 34px;
+    }
+    .services-card {
+        margin-top: 9%;
+    }
+    .works-4-header-box {
+        padding-left: 10%;
+    }
+    .works-menu {
+        gap: 11px;
+        flex-wrap: wrap;
+        justify-content: unset;
+        padding-left: unset;
+    }
+    .works-4-header h2 {
+        width: 100%;
+    }
+    .works-4-header h2 {
+        width: 166px;
+    }
+    .message-block-title span {
+        font-size: 21px;
+    }
+    .form-message label {
+        font-weight: unset; 
+        margin-bottom: unset;
+    }
+    .team-5-header {
+        width: 59%;
+    }
+    #section-6 {
+        height: 25vh;;
+    }
+    .work-together-container, .contact-us-container {
+        gap: 11%;
+    }
+    .first-page-btn {
+        bottom: 2%;
+        left: 2%;
+    }
+}
+@media (max-width: 321px) { 
+    .team-5-header {
+        width: 68%;
+    }
+
 }
 body::-webkit-scrollbar {
     width: 12px;               /* ширина всей полосы прокрутки */
